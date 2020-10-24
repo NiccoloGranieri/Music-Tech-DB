@@ -1,10 +1,6 @@
 from flask import Flask, render_template, request, redirect
 from flaskext.mysql import MySQL
-import json
 import os
-
-config_file = 'config.json'
-config = json.load(open(config_file))
 
 app = Flask(__name__)
 
