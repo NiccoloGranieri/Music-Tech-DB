@@ -18,7 +18,7 @@ conn = mysql.connect()
 cursor = conn.cursor()
 
 #endpoint for search
-@app.route('/search', methods=['GET', 'POST'])
+@app.route('/', methods=['GET', 'POST'])
 
 def search():
     if request.method == "POST":
