@@ -6,10 +6,10 @@ import os
 app = Flask(__name__)
 
 # Database connection info
-app.config['MYSQL_DATABASE_USER'] = 'root'
+app.config['MYSQL_DATABASE_USER'] = 'b9d1a2f3f102f0'
 app.config['MYSQL_DATABASE_PASSWORD'] = S3Connection(os.environ['MTechDB']
-app.config['MYSQL_DATABASE_DB'] = 'MTechDB'
-app.config['MYSQL_DATABASE_HOST'] = 'localhost'
+app.config['MYSQL_DATABASE_DB'] = 'heroku_31e9d6f51da1ee9'
+app.config['MYSQL_DATABASE_HOST'] = 'mysql://b9d1a2f3f102f0:8a1e3911@eu-cdbr-west-03.cleardb.net/heroku_31e9d6f51da1ee9?reconnect=true'
 
 mysql = MySQL()
 mysql.init_app(app)
