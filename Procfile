@@ -1,1 +1,1 @@
-web: gunicorn app:MTechDB
+web: gunicorn app:mtech-db
