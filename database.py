@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 # Database connection info
 app.config['MYSQL_DATABASE_USER'] = 'b115c04449a3c6'
-app.config['MYSQL_DATABASE_PASSWORD'] = 'a4670512' # S3Connection(os.environ['MTechDB'])
+app.config['MYSQL_DATABASE_PASSWORD'] = S3Connection(os.environ['MTechDB'])
 app.config['MYSQL_DATABASE_DB'] = 'heroku_85b0f1140118a9a'
 app.config['MYSQL_DATABASE_HOST'] = 'eu-cdbr-west-03.cleardb.net'
 
