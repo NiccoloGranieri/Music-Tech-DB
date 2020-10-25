@@ -1,13 +1,13 @@
 from flask import Flask, render_template, request, redirect
 from flaskext.mysql import MySQL
-from boto.s3.connection import S3Connection
+# from boto.s3.connection import S3Connection
 import os
 
 app = Flask(__name__)
 
 # Database connection info
 app.config['MYSQL_DATABASE_USER'] = 'b115c04449a3c6'
-app.config['MYSQL_DATABASE_PASSWORD'] = S3Connection(os.environ['MTechDB'])
+app.config['MYSQL_DATABASE_PASSWORD'] = os.environ['MTechDB']
 app.config['MYSQL_DATABASE_DB'] = 'heroku_85b0f1140118a9a'
 app.config['MYSQL_DATABASE_HOST'] = 'eu-cdbr-west-03.cleardb.net'
 
