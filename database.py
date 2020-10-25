@@ -43,7 +43,7 @@ def insert():
         artist = request.form['artist']
         cursor.execute("INSERT INTO Entry (name, artist) Values (%s, %s)", (name, artist))
         conn.commit()
-        return redirect("http://localhost:5000/search", code=302)
+        return redirect("insert.html", code=302)
     return render_template('insert.html')
 
 def main():
