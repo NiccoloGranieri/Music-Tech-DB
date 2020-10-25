@@ -6,10 +6,10 @@ import os
 app = Flask(__name__)
 
 # Database connection info
-app.config['MYSQL_DATABASE_USER'] = 'b115c04449a3c6'
-app.config['MYSQL_DATABASE_PASSWORD'] = os.environ['MTechDB']
-app.config['MYSQL_DATABASE_DB'] = 'heroku_85b0f1140118a9a'
-app.config['MYSQL_DATABASE_HOST'] = 'eu-cdbr-west-03.cleardb.net'
+app.config['MYSQL_DATABASE_USER'] = os.environ['MTechDB-usr']
+app.config['MYSQL_DATABASE_PASSWORD'] = os.environ['MTechDB-psw']
+app.config['MYSQL_DATABASE_DB'] = os.environ['MTechDB-db']
+app.config['MYSQL_DATABASE_HOST'] = os.environ['MTechDB-host']
 
 mysql = MySQL()
 mysql.init_app(app)
