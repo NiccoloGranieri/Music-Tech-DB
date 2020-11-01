@@ -1,10 +1,14 @@
 boto==2.49.0
+cffi==1.14.3
 click==7.1.2
+cryptography==3.2.1
 Flask==1.1.2
 Flask-MySQL==1.5.1
 gunicorn==20.0.4
 itsdangerous==1.1.0
 Jinja2==2.11.2
 MarkupSafe==1.1.1
+pycparser==2.20
 PyMySQL==0.10.1
+six==1.15.0
 Werkzeug==1.0.1
