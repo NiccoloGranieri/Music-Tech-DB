@@ -1,15 +1,14 @@
 from flask import Flask, render_template, request, redirect
 from flaskext.mysql import MySQL
-# from boto.s3.connection import S3Connection
 import os
 
 app = Flask(__name__)
 
 # Database connection info
-app.config['MYSQL_DATABASE_USER'] = os.environ['MTechDB-usr']
-app.config['MYSQL_DATABASE_PASSWORD'] = os.environ['MTechDB-psw']
-app.config['MYSQL_DATABASE_DB'] = os.environ['MTechDB-db']
-app.config['MYSQL_DATABASE_HOST'] = os.environ['MTechDB-host']
+app.config['MYSQL_DATABASE_USER'] = os.environ['MTechDB_usr'] # NEXT TIME YOU PUSH TO HEROKU YOU NEED TO CHANGE THE ENV NAMES FROM DASHES TO UNDERSCORES ON HEROKU
+app.config['MYSQL_DATABASE_PASSWORD'] = os.environ['MTechDB_psw'] # NEXT TIME YOU PUSH TO HEROKU YOU NEED TO CHANGE THE ENV NAMES FROM DASHES TO UNDERSCORES ON HEROKU
+app.config['MYSQL_DATABASE_DB'] = os.environ['MTechDB_db'] # NEXT TIME YOU PUSH TO HEROKU YOU NEED TO CHANGE THE ENV NAMES FROM DASHES TO UNDERSCORES ON HEROKU
+app.config['MYSQL_DATABASE_HOST'] = os.environ['MTechDB_host'] # NEXT TIME YOU PUSH TO HEROKU YOU NEED TO CHANGE THE ENV NAMES FROM DASHES TO UNDERSCORES ON HEROKU
 
 mysql = MySQL()
 mysql.init_app(app)
